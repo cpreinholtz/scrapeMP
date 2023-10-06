@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+#scrape mp forums searching for titles containing "searches" string(s)
+#https://www.geeksforgeeks.org/python-web-scraping-tutorial/
+#https://realpython.com/beautiful-soup-web-scraper-python/#:~:text=Beautiful%20Soup%20is%20a%20Python,web%20page%20using%20developer%20tools.
+
+
+
 import requests
 from bs4 import BeautifulSoup
 
