@@ -17,9 +17,9 @@ base = 'https://www.mountainproject.com/forum/103989416/for-sale-for-free-want-t
 
 subcat = 'topic'
 
-#searches=['highli','staic','van','bus']
-#searches=['totem','staic','chest']
-searches=['totem','staic','chest','oval']
+#searches=['highli','static','van','bus']
+#searches=['totem','static','chest']
+searches=['totem','static','chest harness','oval','beak','micro','trango crag']
 
 
 page = 1
@@ -39,14 +39,13 @@ while page <= stopAt:
       h = link.get('href')
       topic = str(h)
       if subcat in topic:
-        #print(topic)
         for search in searches:
-          if search in topic:
-            print("............")
-            s='{}: {}\n\n'.format(search,topic)
-            foundlist = foundlist+s
-            print(s,flush=True)
-            print("............")
+            if all(subsearch in topic for subsearch in search.split(' ')):
+                print("............")
+                s='{}: {}\n\n'.format(search,topic)
+                foundlist = foundlist+s
+                print(s,flush=True)
+                print("............")
 
 
 
