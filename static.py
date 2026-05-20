@@ -17,11 +17,14 @@ base = 'https://www.mountainproject.com/forum/103989416/for-sale-for-free-want-t
 
 subcat = 'topic'
 
-searches=['highli','staic','van','bus']
+#searches=['highli','staic','van','bus']
+#searches=['totem','staic','chest']
+searches=['totem','staic','chest','oval']
 
 
 page = 1
-stopAt = 2000
+stopAt = 15
+foundlist=""
 
 while page <= stopAt:
   url = base.format(page)
@@ -40,9 +43,11 @@ while page <= stopAt:
         for search in searches:
           if search in topic:
             print("............")
-            print('\n\nFound string {}'.format(search),flush=True)
-            print(topic,flush=True)
+            s='{}: {}\n\n'.format(search,topic)
+            foundlist = foundlist+s
+            print(s,flush=True)
             print("............")
+
 
 
   else:
@@ -52,6 +57,9 @@ while page <= stopAt:
 
 
   page = page +1
+
+with open('output.txt','w') as f:
+    f.write(foundlist)
 
 
 

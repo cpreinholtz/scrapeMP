@@ -18,7 +18,9 @@ https://realpython.com/beautiful-soup-web-scraper-python/#:~:text=Beautiful%20So
 ## todo
 - dump output into a better format not just print it,  perhaps just a csv or even a database???
 - make multi word searches works
+- make searches pass if off by a letter or two?
 - make searches smarter order / caps agnostic etc
 - add another step to calculate distance, price, sold/ not sold etc
 - make this into a process that can run in the background / at startup
 - email you alerts for new items
+- add other websites
